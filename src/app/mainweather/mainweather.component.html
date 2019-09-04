@@ -1,0 +1,36 @@
+<div class="row">
+  <nav class="container-fluid navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="col-5">
+      <h6 class="navbartitle">Herolo Weather Task</h6>
+      <img src='assets/herolo.jpg' class="img">
+    </div>
+
+    <div><p class="S">Click for Dark/Light Theme</p>
+    <div class="col">
+        <label class="checkbox-inline" style="margin-left: 30%;">
+            <label class="switch">
+                <input type="checkbox" class="aa" (click)="data.changeBackgroundcolor()">
+                <span class="slider round"></span>
+            </label>
+          </label>
+    </div>
+    </div>
+    
+    <div class="col switch">
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+          
+            <label class="btn btn-outline-success Home" [routerLink]="['/']">
+              Home
+            </label>
+
+            <label class="btn btn-outline-primary Home" [routerLink]="['/Favorites']">
+              Favorites
+            </label>
+          </div>
+    </div>
+  </nav>
+</div>
+
+<div class="tabcontent">
+  <router-outlet></router-outlet>
+</div>

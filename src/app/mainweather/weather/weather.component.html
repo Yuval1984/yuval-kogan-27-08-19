@@ -1,0 +1,129 @@
+
+<div class="{{data.Backgroundcolor==1?'colorchange':''}}">
+<div class="container">
+    <br/>
+	<div class="row justify-content-center">
+                        <div class="col-12 col-md-10 col-lg-8">
+                            <form class="card card-sm {{data.Backgroundcolor==1?'colorchange1':''}}">
+                                <div class="card-body row no-gutters align-items-center cardy">
+                                    <div class="col-auto f">
+                                        <i class="fas fa-search" style="font-size:30px;color:indigo"></i>
+                                    </div>
+                                    <!--end of col-->
+                                    <div class="col">
+                                        <input class="form-control form-control-lg form-control-borderless sebox" type="search"
+                                        required  
+                                        [(ngModel)]="city" [ngModelOptions]="{standalone: true}" placeholder="Search A City">
+                                      
+                                      </div>
+                                    <!--end of col-->
+                                    <div class="col-auto">
+                                        <button class="btn btn-lg btn-success se" type="submit" (click)="changecity(city)">Search</button>
+                                    </div>
+                                    <!--end of col-->
+                                </div>
+                            </form>
+                            <div
+                                          [hidden]="city!=''">
+                                          <p class="er">Please Type A City</p>
+                            </div>
+                            <div
+                                          [hidden]="checkexpression(city)">
+                                          <p class="er">Only English letters allowed</p>
+                            </div>
+                          </div>
+                        <!--end of col-->
+                    </div>
+</div>
+<div class="container main {{data.Backgroundcolor==1?'colorchange2':''}}">
+  <form class="card card-sm {{data.Backgroundcolor==1?'colorchange2':''}}" *ngIf="current_weather">
+    <div class="card-body {{data.Backgroundcolor==1?'colorchange2':''}}">
+      <div>
+          <div class="row">
+            <div class="col-6">
+              <div class="row">
+                  <div class="col">
+                      <img src={{logo(current_weather.WeatherIcon)}} height="72" width="auto">
+                  </div>
+                  <div class="col">
+                        <div>
+                            <p class="n font-weight-bold">{{current_weather.LocalizedName}}</p>
+                        </div>
+                        <div>        
+                            <p class="n font-weight-bold">{{current_weather.Temperature.Metric.Value}} {{current_weather.Temperature.Metric.Unit}}</p>
+                        </div>
+                  </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="row fav">
+                <div class="col-2" *ngIf="click==1">
+                    <i class="fas fa-sync fa-spin" style="font-size:30px;color:black"></i>
+                </div>
+                <div class="col-2">
+                    <i class="fas fa-heart" style="font-size:30px;color:red"></i>
+                </div>
+                <div class="col-2">
+                    <button type="button" class="btn btn-success favbut" (click)="SendData()">Add/Remove</button>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+
+      <div class="weathertext">
+        <h1 class="wt">{{current_weather.WeatherText}}</h1>
+      </div>
+      <div class="container bottom" *ngIf="AllWeather2.DailyForecasts">
+        <div class="row">
+          <div class="col block">
+            <p class="w">Sunday</p>
+            <div>
+                <img src={{logo(AllWeather2.DailyForecasts[0].Day.Icon)}}>
+            </div>
+            <div>
+              <p class="w">{{AllWeather2.DailyForecasts[0].Temperature.Maximum.Value}}</p>
+            </div>
+          </div>
+          <div class="col block">
+            <p class="w">Monday</p>
+            <div>
+                <img src={{logo(AllWeather2.DailyForecasts[1].Day.Icon)}}>
+            </div>
+            <div class="w">
+              {{AllWeather2.DailyForecasts[1].Temperature.Maximum.Value}}
+            </div>
+          </div>
+          <div class="col block">
+            <p class="w">Tuesday</p>
+            <div>
+                <img src={{logo(AllWeather2.DailyForecasts[2].Day.Icon)}}>
+            </div>
+            <div class="w">
+              {{AllWeather2.DailyForecasts[2].Temperature.Maximum.Value}}
+            </div>
+          </div>
+          <div class="col block">
+            <p class="w">Wednsday</p>
+            <div>
+                <img src={{logo(AllWeather2.DailyForecasts[3].Day.Icon)}}>
+            </div>
+            <div class="w">
+              {{AllWeather2.DailyForecasts[3].Temperature.Maximum.Value}}
+            </div>
+          </div>
+          <div class="col block">
+            <p class="w">Thursday</p>
+            <div>
+                <img src='{{logo(AllWeather2.DailyForecasts[4].Day.Icon)}}'>
+            </div>
+            <div class="w">
+              {{AllWeather2.DailyForecasts[4].Temperature.Maximum.Value}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+</div>

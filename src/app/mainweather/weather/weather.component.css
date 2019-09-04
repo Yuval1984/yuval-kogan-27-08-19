@@ -1,0 +1,147 @@
+.navbartitle{
+    color:white;
+}
+.btn-group-toggle{
+    margin-right: 2px;
+    float: right;
+}
+.input-group{
+    width: 50%;
+    margin-top: 2%;
+    margin-left: 30%;
+}
+.fav{
+    text-align: right;
+    float: right;
+}
+.favbut{
+    width: 180px;
+    height: 40px;
+    text-align: center;
+    padding: 1px;
+}
+.main{
+    margin-top: 10%;
+}
+.weathertext{
+    margin: auto;
+    width: 300px;
+    margin-top: 50px;
+}
+.bottom{
+    margin-top: 100px;
+}
+.block{
+    border-style: solid;
+    margin: 30px;
+    text-align: center;
+}
+
+.wt{
+    text-align: center;
+}
+.form-control-borderless {
+    border: none;
+}
+
+.form-control-borderless:hover, .form-control-borderless:active, .form-control-borderless:focus {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+.er{
+    color: red;
+}
+.img{
+    width: 20px;
+    height: 20px;;
+}
+.colorchange{
+    background-color: black;
+}
+.colorchange1{
+    background-color: grey;
+}
+.colorchange2{
+    background-color: dimgray;
+}
+
+
+@media only screen and (max-width: 987px) {
+    .n{
+        font-size: 13px;
+    }
+    .w{
+        font-size: 13px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .w{
+        font-size: 10px;
+    }
+    .fa-spin{
+        size: 20px;
+    }
+    .se{
+        font-size: 20px;
+        padding: .300rem .32rem;
+    }
+    .sebox{
+        font-size: 20px;
+        padding: .8rem 0.8rem;
+    }
+    .fas{
+        vertical-align: -20%
+    }
+    .favbut{
+        width: 160px;
+        height: 35px;
+        text-align: center;
+        padding: 1px;
+        font-size: 20px;
+    }
+    .wt{
+        font-size: 35px;
+        text-align: center;
+        text-emphasis: 2px;
+    }
+    .er{
+        text-align: center;
+        font-size: 13px;
+        background-color: red;
+    }
+    .n{
+        font-size: 10px;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .w{
+        font-size: 8px;
+    }
+    .n{
+        font-size: 8px;
+    }
+    .se{
+        font-size: 12px;
+        padding: .275rem .25rem;
+    }
+    .sebox{
+        font-size: 12px;
+        padding: .5rem 0.5rem;
+    }
+    .fas{
+        vertical-align: -15%
+    }
+    .favbut{
+        width: 120px;
+        height: 30px;
+        text-align: center;
+        padding: 1px;
+        font-size: 15px;
+    }
+    .wt{
+        font-size: 25px;
+        text-align: center;
+        text-emphasis: 2px;
+    }
+  }

@@ -1,0 +1,23 @@
+<div class="{{data.Backgroundcolor==1?'colorchange':''}}">
+<div class="row" >
+  <div *ngFor="let mycities of AllCities1" class="col-2 ml-10" (click)="data.Cityname=mycities.name" [routerLink]="['/']" id="block">
+    <div class="container">
+            <button class="close x" (click)="delete(mycities.id)">
+                <i class="fa fa-remove" style="font-size:30px;color:red;"></i>
+            </button>
+    </div>
+    <div>
+        <div><p>{{mycities.name}}</p></div>
+    </div>
+    <div>
+      {{mycities.Value}}
+    </div>
+    <div>
+      {{mycities.WeatherText}}
+    </div>
+    <div>
+     <img src={{logo(mycities.logo)}}>
+    </div>
+  </div>
+</div>
+</div>

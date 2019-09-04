@@ -1,0 +1,68 @@
+#block{
+    border-style: solid;
+    margin: 30px;
+    text-align: center;
+    transition: 1s all;
+}
+#myDiv{
+    transform: rotateX(180deg);
+}
+.close{
+    background-color: transparent;
+}
+.c{
+    float: center;
+}
+
+#block:hover {
+    -webkit-transform: rotate(360deg); 
+    -ms-transform: rotate(360deg);      
+    transform: rotate(360deg);
+}
+.colorchange{
+    background-color: black;
+    color: white;
+}
+.card{
+    width: 10rem;
+    
+}
+.card-img-top{
+    background-color: grey;
+    color: white;
+}
+.x{
+    float: right;
+}
+
+@media only screen and (max-width: 987px) {
+    #block{
+        border-style: solid;
+        margin: 25px;
+        text-align: center;
+        transition: 1s all;
+        font-size: 15px;
+    }
+    .fa{
+        font-size: 20px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    #block{
+        border-style: solid;
+        margin: 20px;
+        text-align: center;
+        transition: 1s all;
+        font-size: 12px;
+    }
+}
+@media only screen and (max-width: 600px) {
+    #block{
+        border-style: solid;
+        margin: 15px;
+        text-align: center;
+        transition: 1s all;
+        font-size: 9px;
+    }
+}
+
